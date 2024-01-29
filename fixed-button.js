@@ -126,6 +126,7 @@
               // console.log(event,"event 1234");
               // console.log(event.data.count,"data count 1234");
               // Check the origin to ensure the message is from a trusted source
+              
               if (
                 chatIframe.style.display === "none" &&
                 event.data.count !== undefined &&
