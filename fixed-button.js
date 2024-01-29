@@ -123,18 +123,19 @@
               button.style.transform = "scale(1)";
             });
             window.addEventListener("message", function (event) {
-              console.log(event,"event 1234");
-              console.log(event.data.count,"data count 1234");
+              // console.log(event,"event 1234");
+              // console.log(event.data.count,"data count 1234");
               // Check the origin to ensure the message is from a trusted source
               if (
                 chatIframe.style.display === "none" &&
                 event.data.count !== undefined &&
                 event.data.count
               ) {
-                console.log("data count event 123", event.data.count);
+                console.log(event.data.count,"data count event added 1234");
                 numberSpan.style.display = "inline-block";
                 numberSpan.innerText = event.data.count;
               } else {
+                console.log(event.data.count," event.data.count else 1234");
                 !!event.data.count &&
                   chatIframe.contentWindow.postMessage(
                     "0",
