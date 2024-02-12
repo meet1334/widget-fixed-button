@@ -141,7 +141,7 @@
                   apiData.chatWidgetPortal
                 );
             }
-            console.log("Received message: 1234", event.data);
+            // console.log("Received message: 1234", event.data);
           });
         }
       })
