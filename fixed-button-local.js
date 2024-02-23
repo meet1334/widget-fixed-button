@@ -121,7 +121,7 @@
           button.addEventListener("mouseup", () => {
             button.style.transform = "scale(1)";
           });
-          window.addEventListener("message", function (event) {
+          document.addEventListener("message", function (event) {
             // Check the origin to ensure the message is from a trusted source
             if (
               chatIframe.style.display === "none" &&
