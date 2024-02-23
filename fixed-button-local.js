@@ -120,7 +120,7 @@
           button.addEventListener("mouseup", () => {
             button.style.transform = "scale(1)";
           });
-          const fun = (event) => {
+          window.addEventListener("message", function (event) {
             // Check the origin to ensure the message is from a trusted source
             if (
               chatIframe.style.display === "none" &&
@@ -139,10 +139,8 @@
                   apiData.chatWidgetPortal
                 );
             }
-            window.removeEventListener("message", fun);
             console.log("Received message: 1234", event.data);
-          };
-          window.addEventListener("message", fun);
+          });
         }
       })
       .catch((err) => {
