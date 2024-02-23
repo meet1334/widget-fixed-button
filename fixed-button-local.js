@@ -7,7 +7,7 @@
     const addPlus = ButtonKeys.replace(/ /g, "+");
     const managePlus = encodeURIComponent(addPlus);
     var url =
-      "http://localhost:7079/api/radefy-customer/User/getCustomerByWidgetChatId?widgetId=" +
+      "https://localhost:7079/api/radefy-customer/User/getCustomerByWidgetChatId?widgetId=" +
       managePlus;
     fetch(url, {
       method: "GET",
