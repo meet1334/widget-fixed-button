@@ -121,7 +121,7 @@
           button.addEventListener("mouseup", () => {
             button.style.transform = "scale(1)";
           });
-          document.addEventListener("message", function (event) {
+          window.addEventListener("message", function (event) {
             // Check the origin to ensure the message is from a trusted source
             if (
               chatIframe.style.display === "none" &&
@@ -131,6 +131,7 @@
               console.log(event.data.count, "data count event added 1234");
               numberSpan.style.display = "inline-block";
               numberSpan.innerText = event.data.count;
+            
             } else {
               !!event.data.count &&
                 console.log(!!event.data.count, " event.data.count else 1234");
@@ -140,6 +141,7 @@
                   apiData.chatWidgetPortal
                 );
             }
+            window.removeEventListener("message")
             console.log("Received message: 1234", event.data);
           });
         }
