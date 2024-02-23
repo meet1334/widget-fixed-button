@@ -13,6 +13,7 @@
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        
       },
     })
       .then(function (response) {
@@ -125,7 +126,7 @@
             if (
               chatIframe.style.display === "none" &&
               event.data.count !== undefined &&
-              event.data.count
+              event.data.count 
             ) {
               console.log(event.data.count, "data count event added 1234");
               numberSpan.style.display = "inline-block";
